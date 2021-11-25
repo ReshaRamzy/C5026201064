@@ -19,6 +19,27 @@ Route::get('praktikum2', function () {
     return view('htmlprak2');
 });
 
-Route::get('isiannama',"ViewController@showForm");
-Route::post('greetings',"ViewController@resultGreetings");
+Route::get('tugas4', function () {
+    return view('htmltugas4');
+});
 
+Route::get('kalkulator',"ViewController@showkalkulator");
+Route::post('hasil',"ViewController@resulthasil");
+
+Route::get('ets',"ViewController@showets");
+
+//route CRUD
+Route::get('/pegawai','PegawaiController@index');
+Route::get('/pegawai/tambah','PegawaiController@tambah');
+Route::post('/pegawai/store','PegawaiController@store');
+Route::get('/pegawai/edit/{id}','PegawaiController@edit');
+Route::post('/pegawai/update','PegawaiController@update');
+Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+
+//route tugas
+Route::get('/tugas','TugasController@index');
+Route::get('/tugas/tambah','TugasController@tambah');
+Route::post('/tugas/store','TugasController@store');
+Route::get('/tugas/edit/{id}','TugasController@edit');
+Route::post('/tugas/update','TugasController@update');
+Route::get('/tugas/hapus/{id}','TugasController@hapus');

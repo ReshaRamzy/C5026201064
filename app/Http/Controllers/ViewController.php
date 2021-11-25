@@ -7,14 +7,18 @@ use Illuminate\Http\Request;
 class ViewController extends Controller
 {
     //
-    function showForm()
+    function showkalkulator()
     {
-        return view('showgreetings');
+        return view('kalkulator');
     }
 
-    function resultGreetings()
+    function resulthasil()
     {
-        return view('tugas');
+        return view('hasil');
     }
 
+    function showets()
+    {
+        return view('ets');
+    }
 }
