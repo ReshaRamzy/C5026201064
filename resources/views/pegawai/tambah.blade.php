@@ -1,6 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
+@extends('layout.bahagia')
+
+@section('title', 'Menambah Pegawai')
+@section('judulhalaman', 'Menambah Data Pegawai')
+
+@section('konten')
 	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
 </head>
 <body>
@@ -21,6 +24,4 @@
 		Alamat <textarea name="alamat" required="required"></textarea> <br/>
 		<input type="submit" value="Simpan Data">
 	</form>
-
-</body>
-</html>
+    @endsection
