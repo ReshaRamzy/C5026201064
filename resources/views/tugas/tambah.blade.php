@@ -15,7 +15,12 @@
 
 	<form action="/tugas/store" method="post">
 		{{ csrf_field() }}
-		IDPegawai <input type="text" name="idpegawai" required="required"> <br/>
+        Nama Pegawai <select name="idpegawai" >
+            @foreach($pegawai as $p)
+             <option value="{{ $p->pegawai_id }}">{{ $p->pegawai_nama }}</option>
+            @endforeach
+        </select>
+        <br>
 		Tanggal <input type="datetime-local" name="tanggal" required="required"> <br/>
 		NamaTugas <input type="text" name="namatugas" required="required"> <br/>
         Status <input type="text" name="status" required="required"> <br/>

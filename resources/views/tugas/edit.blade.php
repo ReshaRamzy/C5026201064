@@ -15,7 +15,12 @@
 	<form action="/tugas/update" method="post">
 		{{ csrf_field() }}
 		<input type="hidden" name="id" value="{{ $p->ID }}"> <br/>
-		IDPegawai <input type="text" required="required" name="idpegawai" value="{{ $p->IDPegawai }}"> <br/>
+        Nama Pegawai <select name="idpegawai" >
+            @foreach($pegawai as $p)
+             <option value="{{ $p->pegawai_id }}" @if ($p->pegawai_id === $a->IDPegawai ) selected="selected" @endif>{{ $p->pegawai_nama }}</option>
+            @endforeach
+        </select>
+        <br>
 		Tanggal <input type="date" required="required" name="tanggal" value="{{ $p->Tanggal }}"> <br/>
 		NamaTugas <input type="text" required="required" name="namatugas" value="{{ $p->NamaTugas }}"> <br/>
 		Status <input type="text" required="required" name="status" value="{{ $p->Status }}"> <br/>

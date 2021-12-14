@@ -10,6 +10,12 @@
 
 	<br/>
 	<br/>
+<div class="container">
+    <form action="/pegawai/cari" method="GET">
+		<input type="text" name="cari" placeholder="Cari Pegawai" value="{{ old('cari') }}">
+		<input type="submit" value="CARI">
+	</form>
+</div>
 
     <table class="styled-table">
         <thead>
@@ -27,6 +33,8 @@
 			<td>{{ $p->pegawai_umur }}</td>
 			<td>{{ $p->pegawai_alamat }}</td>
 			<td>
+                <a href="/pegawai/view/{{ $p->pegawai_id }}">Detail</a>
+                |
 				<a href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
 				|
 				<a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
@@ -34,4 +42,5 @@
 		</tr>
 		@endforeach
 	</table>
+    {{ $pegawai->links() }}
     @endsection

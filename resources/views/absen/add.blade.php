@@ -8,7 +8,7 @@
     <form action="/absen/store" method="post">
         {{ csrf_field() }}
 
-        IDPegawai <select name="idpegawai" >
+        Nama Pegawai <select name="idpegawai" >
     @foreach($pegawai as $p)
      <option value="{{ $p->pegawai_id }}">{{ $p->pegawai_nama }}</option>
     @endforeach

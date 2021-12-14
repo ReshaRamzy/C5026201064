@@ -11,14 +11,21 @@ class TugasController extends Controller
     public function index()
     {
         // mengambil data dari table tugas
-        $tugas = DB::table('tugas')->get();
-
+        // $tugas = DB::table('tugas')->get();
+        $tugas = DB::table('tugas')
+        ->join('pegawai', 'tugas.IDPegawai', '=', 'pegawai.pegawai_id')
+        ->select('tugas.*', 'pegawai.pegawai_nama')
+        ->paginate(5);
         // mengirim data tugas ke view index
         return view('tugas.index', ['tugas' => $tugas]);
     }
     // method untuk menampilkan view form tambah tugas
     public function tambah()
     {
+          // mengambil data dari table pegawai
+          $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get(); //defaultnya urut Primary Key
+          // memanggil view add
+          return view('tugas.tambah', ['pegawai' => $pegawai]);
 
         // memanggil view tambah
         return view('tugas.tambah');

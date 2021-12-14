@@ -162,7 +162,7 @@
                     <img src="https://i.ibb.co/xDYzrgc/fotoramzy.jpg" id="foto" class="img-responsive">
                 </div>
                 <div class="col-sm-10">
-                    <h3 id="nrp">506202064</h3>
+                    <h3 id="nrp">506201064</h3>
                     <h3 id="nama">Resha Ramzy Arkansa</h3>
                 </div>
             </div>
@@ -176,8 +176,7 @@
                     <li><a href="/pegawai"><i class="fas fa-user"></i> Pegawai</a></li>
                     <li><a href="/absen"><i class="fas fa-calendar-week"></i> Absen</a></li>
                     <li><a href="/tugas"><i class="fas fa-tasks"></i> Tugas</a></li>
-                    <li><a href="/minggudepan">Minggu depan</a></li>
-                    <li><a href="/praktikum">Praktikum</a></li>
+                    <li><a href="/snack">Praktikum</a></li>
                 </ul>
             </div>
             <div class="col-sm-10" >

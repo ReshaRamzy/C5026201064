@@ -15,7 +15,7 @@
     <table class="styled-table">
         <thead>
 		<tr>
-			<th>IDPegawai</th>
+			<th>Nama Pegawai</th>
 			<th>Tanggal</th>
 			<th>NamaTugas</th>
 			<th>Status</th>
@@ -23,7 +23,7 @@
 		</tr></thead>
 		@foreach($tugas as $p)
 		<tr>
-			<td>{{ $p->IDPegawai }}</td>
+			<td>{{ $p->pegawai_nama }}</td>
 			<td>{{ $p->Tanggal }}</td>
 			<td>{{ $p->NamaTugas }}</td>
             <td>{{ $p->Status }}</td>
@@ -35,4 +35,5 @@
 		</tr>
 		@endforeach
 	</table>
+    {{ $tugas -> links() }}
     @endsection

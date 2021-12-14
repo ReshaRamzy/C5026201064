@@ -1,11 +1,10 @@
 @extends('layout.bahagia')
 
 @section('title', 'Data Absen')
-@section('judulhalaman', 'Data Absen')
+@section('judulhalaman', 'Data Absensi Pegawai')
 
 @section('konten')
 
-	<h2>Daftar Absensi Pegawai</h2>
 
 
 	<a href="/absen/add"> + Tambah Absensi</a>
@@ -17,7 +16,7 @@
         <thead>
 		<tr>
 
-			<th>IDPegawai</th>
+			<th>Nama Pegawai</th>
 			<th>Tanggal</th>
 			<th>Status</th>
 			<th>Opsi</th>
@@ -25,7 +24,7 @@
 		@foreach($absen as $a)
 		<tr>
 
-			<td>{{ $a->IDPegawai }}</td>
+			<td>{{ $a->pegawai_nama }}</td>
 			<td>{{ $a->Tanggal }}</td>
 			<td>{{ $a->Status }}</td>
 			<td>
@@ -42,4 +41,6 @@
         S : Sakit <br>
         A : Alpha <br>
         </p>
+
+        {{ $absen -> links() }}
 @endsection

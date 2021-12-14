@@ -35,6 +35,8 @@ Route::post('/pegawai/store','PegawaiController@store');
 Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+Route::get('/pegawai/cari','PegawaiController@cari');
+Route::get('/pegawai/view/{id}','PegawaiController@detail');
 
 //route tugas
 Route::get('/tugas','TugasController@index');
@@ -51,3 +53,13 @@ Route::post('/absen/store','AbsenController@store');
 Route::get('/absen/edit/{id}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
+
+//route praktikum
+Route::get('/snack','SnackController@index');
+Route::get('/snack/tambah','SnackController@tambah');
+Route::post('/snack/store','SnackController@store');
+Route::get('/snack/edit/{id}','SnackController@edit');
+Route::post('/snack/update','SnackController@update');
+Route::get('/snack/hapus/{id}','SnackController@hapus');
+Route::get('/snack/cari','SnackController@cari');
+Route::get('/snack/view/{id}','SnackController@detail');
