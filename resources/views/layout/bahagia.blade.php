@@ -177,7 +177,8 @@
                     <li><a href="/absen"><i class="fas fa-calendar-week"></i> Absen</a></li>
                     <li><a href="/tugas"><i class="fas fa-tasks"></i> Tugas</a></li>
                     <li><a href="/snack">Praktikum</a></li>
-                </ul>
+                    <li><a href="/karyawan1">EAS</a></li>
+                 </ul>
             </div>
             <div class="col-sm-10" >
                 <h3>
