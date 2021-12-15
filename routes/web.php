@@ -63,3 +63,9 @@ Route::post('/snack/update','SnackController@update');
 Route::get('/snack/hapus/{id}','SnackController@hapus');
 Route::get('/snack/cari','SnackController@cari');
 Route::get('/snack/view/{id}','SnackController@detail');
+
+//route EAS
+Route::get('/karyawan1','Karyawan1Controller@index');
+Route::get('/karyawan1/tambah','Karyawan1Controller@tambah');
+Route::post('/karyawan1/store','Karyawan1Controller@store');
+Route::get('/karyawan1/hapus/{id}','Karyawan1Controller@hapus');
